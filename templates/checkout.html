@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Check Out Book: {{ book.title }}</h1>
+<form method="POST">
+  <div class="form-group">
+    <label for="borrower">Borrower Name</label>
+    <input type="text" name="borrower" class="form-control" required>
+  </div>
+  <button type="submit" class="btn btn-success">Check Out</button>
+  <a href="{{ url_for('index') }}" class="btn btn-secondary">Cancel</a>
+</form>
+{% endblock %}
